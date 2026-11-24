@@ -1,0 +1,10 @@
+{
+  "name": "skim-style",
+  "version": "0.1.0",
+  "description": "Replies for a reader who skims: the answer first, short plain sentences, and three detail levels you set with L1, L2 or L3.",
+  "types": "./types/index.d.ts",
+  "license": "MIT",
+  "author": {
+    "name": "matanyarosenberg"
+  }
+}

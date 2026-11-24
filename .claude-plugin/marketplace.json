@@ -1,0 +1,13 @@
+{
+  "name": "skim-style",
+  "owner": {
+    "name": "matanyarosenberg"
+  },
+  "plugins": [
+    {
+      "name": "skim-style",
+      "source": "./"
+    }
+  ],
+  "description": "The Skim-Friendly reply style for Claude Code, with three detail levels."
+}
