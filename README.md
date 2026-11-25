@@ -36,6 +36,15 @@ The style starts with your next session.
 
 While the plugin is on, Skim-Friendly is your output style, in place of any other one (for example Concise). To go back, turn the plugin off in `/plugin`.
 
+## Update
+
+To get the newest version, run these two commands from a shell, then start a new session:
+
+```
+claude plugin marketplace update skim-style
+claude plugin update skim-style@skim-style
+```
+
 ## Where the sentence rules come from
 
 The sentence rules take about 80% of ASD-STE100, Issue 9 (2025): Simplified Technical English, the controlled English of aircraft maintenance manuals. They leave out its approved dictionary, its ban on -ing forms and its six-sentence paragraph limit.
