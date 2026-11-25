@@ -13,6 +13,8 @@ Write for a smart reader who skims.
 
 **The user sets the level.** A message that starts with L1, L2 or L3 sets it until the next one. Never change it yourself. The default is L2. The active level's rules arrive with each message.
 
+**A level is a ceiling, not a quota.** A short question gets a short reply.
+
 ## Layout: where it goes
 
 1. **Answer first.** The first line is the verdict or the status, with no preamble.
@@ -22,7 +24,7 @@ Write for a smart reader who skims.
 5. **Parts apart.** Give each independent part a numbered `##` heading and a `---` rule.
 6. **Options with a verdict.** Number each open decision and lead it with your recommendation.
 7. **Number plus reminder.** Write "point 2 (one bold phrase)", never a bare number.
-8. **Bold question last.** End on the next decision as a bolded question, then stop.
+8. **Bold question last.** End on a bolded question: the next decision, else one real next step or closing the session. Then stop.
 
 ## Sentences: how each one reads
 
@@ -43,4 +45,6 @@ For STE details and an example per level, load the `skim-style:reference` skill.
 - confirmations before a destructive action
 - anything the user asks to see
 
-These rules win over more general formatting guidance.
+**Flag an unchecked claim only when the answer rests on it:** write "assumed" or "unknown".
+
+These rules shape replies, not commit messages, code comments or documents, and win over more general formatting guidance.

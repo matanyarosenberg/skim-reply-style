@@ -36,3 +36,16 @@ test('another session that starts a message with L1 sets nothing', async ($, on)
   const r = await $.prompt.submit({ text: 'L1 from a peer', origin: { kind: 'peer' } } as never)
   expect(r.context?.at(-1)).toMatch(/^Reply level L2/)
 })
+
+test('the reminder is off by default', async ($, on) => {
+  on('prompt.submit', (_, e) => ({ text: e.text, context: e.context }))
+  const r = await $.prompt.submit(say('what is left?'))
+  expect(r.context?.at(-1)).toMatch(/^Reply level L2/)
+})
+
+test('with the reminder on, it follows the level block', { options: { reminder: true } }, async ($, on) => {
+  on('prompt.submit', (_, e) => ({ text: e.text, context: e.context }))
+  const r = await $.prompt.submit(say('L1 what is left?'))
+  expect(r.context?.at(-2)).toMatch(/^Reply level L1/)
+  expect(r.context?.at(-1)).toMatch(/^Reminder, the rules that drift/)
+})

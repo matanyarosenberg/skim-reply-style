@@ -14,8 +14,9 @@ At every level, errors, failing test output, security warnings, confirmations be
 
 ## What the plugin holds
 
-- **The output style "Skim-Friendly"** (about 315 words). It loads with every reply and keeps Claude Code's coding instructions.
+- **The output style "Skim-Friendly"** (about 365 words). It loads with every reply and keeps Claude Code's coding instructions.
 - **A hook** that reads L1, L2 or L3 at the start of your message. It adds only the active level's rules (30 to 40 words) to each message.
+- **An optional reminder**, off by default. If replies drift in long sessions, turn on "Per-turn reminder" in `/config`. The hook then adds the four rules that drift most to each message (about 50 words).
 - **The skill `skim-style:reference`** (about 1,100 words): the full sentence rules and one reply shown at each level. Claude loads it only when it needs it.
 
 ## Install

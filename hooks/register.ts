@@ -1,6 +1,6 @@
 import type { EngineInterface, Register } from 'claude-code'
 import type { Level } from '../types'
-import { LEVELS } from './levels'
+import { LEVELS, REMINDER } from './levels'
 
 // The level lives in session state: each new session starts at L2.
 const LEVEL = { plugin: 'skim-style', key: 'level' } as const
@@ -22,7 +22,9 @@ const activeLevel = async ($: EngineInterface, text: string, kind: string): Prom
   return value ?? 'L2'
 }
 
-export const register: Register = (on) => {
+export const register: Register = (on, options) => {
+  const blocks = (level: Level) => (options.reminder === true ? [LEVELS[level], REMINDER] : [LEVELS[level]])
+
   on('prompt.submit', async ($, e, next) => {
     if (e.command || e.isMeta) return next(e)
 
@@ -30,6 +32,6 @@ export const register: Register = (on) => {
     const level = await activeLevel($, e.text, e.origin.kind).catch(() => null)
     if (!level) return next(e)
 
-    return next({ ...e, context: [...(e.context ?? []), LEVELS[level]] })
+    return next({ ...e, context: [...(e.context ?? []), ...blocks(level)] })
   })
 }

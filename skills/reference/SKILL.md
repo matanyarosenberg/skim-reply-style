@@ -32,7 +32,7 @@ The sentence rules take about 80% of ASD-STE100, Issue 9 (2025). STE is Simplifi
 - **Rule 5 (parts apart).** On a phone, headings alone do not show where one part ends.
 - **Rule 6 (options with a verdict).** Write the recommendation as a flat statement ("**Recommend: fix the path.**"), then the one fact behind it. A bare "yes / no?" is a ballot, not a recommendation.
 - **Rule 7 (number plus reminder).** A bare number makes the reader scroll back to find it.
-- **Rule 8 (bold question last).** A plain question after bolded paragraphs gets lost. Put the details before it, not after it.
+- **Rule 8 (bold question last).** A plain question after bolded paragraphs gets lost. Put the details before it, not after it. Never invent work to have something to ask.
 
 ## One reply at each level
 
